@@ -37,19 +37,15 @@
     { icon: "devicon-vim-plain",                           name: "Vim btw"    },
   ];
 
-  const allTech = [...row1, ...row2].sort(() => Math.random() - 0.5);
-
   let track1: HTMLElement;
+  let track2: HTMLElement;
 
   onMount(() => {
     const isMobile = window.innerWidth < 768;
-    gsap.to(track1, {
-      x: "-50%",
-      duration: isMobile ? 25 : 60,
-      ease: "none",
-      repeat: -1,
-      modifiers: { x: (x) => `${((parseFloat(x) % 50) - 50) % -50}%` },
-    });
+    const duration = isMobile ? 20 : 40;
+
+    gsap.to(track1, { x: "-50%", duration, ease: "none", repeat: -1 });
+    gsap.to(track2, { x: "0%", duration, ease: "none", repeat: -1, startAt: { x: "-50%" } });
   });
 </script>
 
@@ -59,19 +55,39 @@
     <div style="flex:1;height:1px;background:rgba(255,255,255,0.06);"></div>
   </div>
 
-  <div style="overflow:hidden;position:relative;">
-    <div style="position:absolute;top:0;bottom:0;left:0;width:4rem;background:linear-gradient(to right,#000,transparent);z-index:10;pointer-events:none;"></div>
-    <div style="position:absolute;top:0;bottom:0;right:0;width:4rem;background:linear-gradient(to left,#000,transparent);z-index:10;pointer-events:none;"></div>
-    <div bind:this={track1} style="display:flex;gap:2rem;white-space:nowrap;will-change:transform;align-items:center;padding:0.2rem 0;">
-      {#each [...allTech, ...allTech] as tech}
-        <div style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.4;transition:opacity 0.25s;"
-          onmouseenter={(e) => (e.currentTarget as HTMLElement).style.opacity = '1'}
-          onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.4'}
-        >
-          <i class={tech.icon} style="font-size:1.3rem;color:#fff;"></i>
-          <span style="font-size:0.5rem;color:rgba(255,255,255,0.35);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
-        </div>
-      {/each}
+  <div style="display:flex;flex-direction:column;gap:0.75rem;">
+    <div style="overflow:hidden;position:relative;">
+      <div style="position:absolute;top:0;bottom:0;left:0;width:4rem;background:linear-gradient(to right,#000,transparent);z-index:10;pointer-events:none;"></div>
+      <div style="position:absolute;top:0;bottom:0;right:0;width:4rem;background:linear-gradient(to left,#000,transparent);z-index:10;pointer-events:none;"></div>
+      <div bind:this={track1} style="display:flex;gap:2rem;white-space:nowrap;will-change:transform;align-items:center;padding:0.2rem 0;">
+        {#each [...row1, ...row1] as tech}
+          <div role="img" aria-label={tech.name}
+            style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.4;transition:opacity 0.25s;"
+            onmouseenter={(e) => (e.currentTarget as HTMLElement).style.opacity = '1'}
+            onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.4'}
+          >
+            <i class={tech.icon} style="font-size:1.3rem;color:#fff;"></i>
+            <span style="font-size:0.5rem;color:rgba(255,255,255,0.35);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
+          </div>
+        {/each}
+      </div>
+    </div>
+
+    <div style="overflow:hidden;position:relative;">
+      <div style="position:absolute;top:0;bottom:0;left:0;width:4rem;background:linear-gradient(to right,#000,transparent);z-index:10;pointer-events:none;"></div>
+      <div style="position:absolute;top:0;bottom:0;right:0;width:4rem;background:linear-gradient(to left,#000,transparent);z-index:10;pointer-events:none;"></div>
+      <div bind:this={track2} style="display:flex;gap:2rem;white-space:nowrap;will-change:transform;align-items:center;padding:0.2rem 0;">
+        {#each [...row2, ...row2] as tech}
+          <div role="img" aria-label={tech.name}
+            style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.4;transition:opacity 0.25s;"
+            onmouseenter={(e) => (e.currentTarget as HTMLElement).style.opacity = '1'}
+            onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.4'}
+          >
+            <i class={tech.icon} style="font-size:1.3rem;color:#fff;"></i>
+            <span style="font-size:0.5rem;color:rgba(255,255,255,0.35);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
+          </div>
+        {/each}
+      </div>
     </div>
   </div>
 </section>

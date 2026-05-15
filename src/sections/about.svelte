@@ -15,7 +15,7 @@
   });
 
   const facts = [
-    { val:"3+", label:"Years building products" },
+    { val:`${new Date().getFullYear() - 2022}+`, label:"Years building products" },
     { val:"10+",label:"Technologies shipped"    },
     { val:"∞",  label:"Vim escape attempts"     },
   ];
@@ -35,7 +35,7 @@
       </h2>
       <div style="display:flex;flex-direction:column;gap:1rem;">
         <p class="a-reveal" style="font-size:0.95rem;color:rgba(255,200,255,0.55);line-height:1.75;">
-          I build end-to-end products — pixel-perfect mobile UIs in React Native and Flutter backed by GCP and AWS. I care about the full picture, not just my slice.
+          I build end-to-end products — pixel-perfect mobile UIs in React Native and Flutter backed by GCP. I care about the full picture, not just my slice.
         </p>
         <p class="a-reveal" style="font-size:0.95rem;color:rgba(255,200,255,0.55);line-height:1.75;">
           Sweet spot: mobile-first apps with Firebase or serverless GCP. Fast to ship, easy to scale.

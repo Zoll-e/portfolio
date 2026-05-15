@@ -42,6 +42,6 @@
   </div>
 
   <p style="font-size:0.65rem;color:rgba(255,0,255,0.3);letter-spacing:0.06em;font-style:italic;">
-    Built with Svelte · GSAP · Lenis · Vim (still inside)
+    Built with Svelte · Vim (still inside)
   </p>
 </footer>

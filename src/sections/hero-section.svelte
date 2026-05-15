@@ -68,14 +68,9 @@
   background: linear-gradient(160deg, #0d001a 0%, #1a0040 35%, #2d0060 60%, #1a003a 80%, #0d001a 100%);
 "
 >
-  <!-- <!-- diagonal grid SVG (from original) --> -->
-  <!-- <div style="position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0.4; -->
-  <!--   background-image:url('data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%20width%3D%22512%22%20height%3D%22512%22%20preserveAspectRatio%3D%22none%22%3E%20%3Cstyle%3E%20line%20%7B%20stroke-linecap%3A%20square%3B%20stroke-width%3A%202.01px%3B%20stroke%3A%20rgba(255,87,238,0.15)%3B%20vector-effect%3A%20non-scaling-stroke%3B%20%7D%20%3C%2Fstyle%3E%20%3Cline%20x1%3D%22256%22%20y1%3D%220%22%20x2%3D%220%22%20y2%3D%22256%22%20%2F%3E%20%3Cline%20x1%3D%22256%22%20y1%3D%22512%22%20x2%3D%22512%22%20y2%3D%22256%22%20%2F%3E%3C%2Fsvg%3E'); -->
-  <!--   background-size:80px 80px;"> -->
-  <!-- </div> -->
-
   <!-- retro sun -->
-  <div class="retro-sun"
+  <div
+    class="retro-sun"
     style="position:absolute;bottom:30%;left:50%;transform:translateX(-50%);
     width:clamp(200px,32vw,380px);aspect-ratio:1;border-radius:50%;z-index:1;pointer-events:none;
     background:linear-gradient(to bottom,#ff9f00 0%,#ff4fa3 45%,#9400ff 100%);

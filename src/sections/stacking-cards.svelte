@@ -118,6 +118,7 @@
         pin: true,
         pinSpacing: true,
         anticipatePin: 1,
+        pinReparent: true,
       },
     });
 
@@ -155,7 +156,7 @@
   bind:this={section}
   id="projects"
   style="
-  height:100svh; overflow:hidden; position:relative;
+  width:100%; height:100svh; overflow:hidden; position:relative;
   background:linear-gradient(135deg,#160830 0%,#220a40 40%,#1a0635 70%,#100520 100%);
 "
 >

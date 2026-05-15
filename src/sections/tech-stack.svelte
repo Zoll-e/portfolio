@@ -37,15 +37,16 @@
     { icon: "devicon-vim-plain",                           name: "Vim btw"    },
   ];
 
+  const allTech = [...row1, ...row2];
+
+  let trackDesktop: HTMLElement;
   let track1: HTMLElement;
   let track2: HTMLElement;
 
   onMount(() => {
-    const isMobile = window.innerWidth < 768;
-    const duration = isMobile ? 20 : 40;
-
-    gsap.to(track1, { x: "-50%", duration, ease: "none", repeat: -1 });
-    gsap.to(track2, { x: "0%", duration, ease: "none", repeat: -1, startAt: { x: "-50%" } });
+    gsap.to(trackDesktop, { x: "-50%", duration: 60, ease: "none", repeat: -1 });
+    gsap.to(track1, { x: "-50%", duration: 20, ease: "none", repeat: -1 });
+    gsap.fromTo(track2, { x: "-50%" }, { x: "0%", duration: 20, ease: "none", repeat: -1 });
   });
 </script>
 
@@ -55,7 +56,26 @@
     <div style="flex:1;height:1px;background:rgba(255,255,255,0.06);"></div>
   </div>
 
-  <div style="display:flex;flex-direction:column;gap:0.75rem;">
+  <!-- Desktop: single row -->
+  <div class="desktop-marquee" style="overflow:hidden;position:relative;">
+    <div style="position:absolute;top:0;bottom:0;left:0;width:4rem;background:linear-gradient(to right,#000,transparent);z-index:10;pointer-events:none;"></div>
+    <div style="position:absolute;top:0;bottom:0;right:0;width:4rem;background:linear-gradient(to left,#000,transparent);z-index:10;pointer-events:none;"></div>
+    <div bind:this={trackDesktop} style="display:flex;gap:2rem;white-space:nowrap;will-change:transform;align-items:center;padding:0.2rem 0;">
+      {#each [...allTech, ...allTech] as tech}
+        <div role="img" aria-label={tech.name}
+          style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.4;transition:opacity 0.25s;"
+          onmouseenter={(e) => (e.currentTarget as HTMLElement).style.opacity = '1'}
+          onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.4'}
+        >
+          <i class={tech.icon} style="font-size:1.3rem;color:#fff;"></i>
+          <span style="font-size:0.5rem;color:rgba(255,255,255,0.35);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
+        </div>
+      {/each}
+    </div>
+  </div>
+
+  <!-- Mobile: two rows -->
+  <div class="mobile-marquee">
     <div style="overflow:hidden;position:relative;">
       <div style="position:absolute;top:0;bottom:0;left:0;width:4rem;background:linear-gradient(to right,#000,transparent);z-index:10;pointer-events:none;"></div>
       <div style="position:absolute;top:0;bottom:0;right:0;width:4rem;background:linear-gradient(to left,#000,transparent);z-index:10;pointer-events:none;"></div>
@@ -91,3 +111,13 @@
     </div>
   </div>
 </section>
+
+<style>
+  .desktop-marquee { display: flex; }
+  .mobile-marquee  { display: none; flex-direction: column; gap: 0.75rem; }
+
+  @media (max-width: 768px) {
+    .desktop-marquee { display: none; }
+    .mobile-marquee  { display: flex; }
+  }
+</style>

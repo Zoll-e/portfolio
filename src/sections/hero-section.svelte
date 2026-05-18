@@ -12,7 +12,7 @@
     "Flutter",
     "GCP · Firebase",
     "AWS",
-    "K9S",
+    "K8S",
     "TypeScript",
     "Node.js",
   ];

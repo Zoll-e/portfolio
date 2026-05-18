@@ -84,7 +84,7 @@
       text-shadow:0 0 60px #ff00ff22;
     "
     >
-      Let's build/work<br />
+      Let's build<br />
       <span style="color:#ff00ff;text-shadow:0 0 30px #ff00ff;">together.</span>
     </h2>
 

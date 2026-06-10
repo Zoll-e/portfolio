@@ -169,7 +169,7 @@
     style="position:absolute;inset:0;z-index:1;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.07) 0px,rgba(0,0,0,0.07) 1px,transparent 1px,transparent 3px);"
   ></div>
 
-  <div style="position:absolute;top:2rem;left:2.5rem;z-index:50;">
+  <div class="projects-header" style="position:absolute;z-index:50;">
     <p
       style="font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;color:#ff00ff88;margin-bottom:0.35rem;font-weight:700;text-shadow:0 0 10px #ff00ff;"
     >
@@ -267,3 +267,18 @@
     {/each}
   </div>
 </section>
+
+<style>
+  /* clear the fixed navbar while the section is pinned */
+  .projects-header {
+    top: 5.5rem;
+    left: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .projects-header {
+      top: 5rem;
+      left: 1.5rem;
+    }
+  }
+</style>

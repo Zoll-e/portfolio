@@ -9,7 +9,6 @@
   const words = ["Zoltan", "Debreceni"];
   const stack = [
     "React Native",
-    "Flutter",
     "GCP · Firebase",
     "AWS",
     "K8S",
@@ -125,8 +124,8 @@
       <p
         style="font-size:0.95rem;color:rgba(255,220,255,0.55);line-height:1.65;max-width:400px;"
       >
-        Building mobile & web experiences with React Native, Flutter, and cloud
-        infra on GCP & Firebase.
+        Building mobile & web experiences with React Native and cloud infra on
+        GCP & Firebase.
       </p>
       <div style="display:flex;flex-wrap:wrap;gap:0.45rem;margin-top:0.4rem;">
         {#each stack as item}

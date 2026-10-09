@@ -23,4 +23,9 @@
     font-family: "Inter", system-ui, sans-serif;
     background: #0d001a;
   }
+
+  /* keep anchor targets clear of the fixed navbar */
+  :global(#about), :global(#stack), :global(#contact) {
+    scroll-margin-top: 5rem;
+  }
 </style>

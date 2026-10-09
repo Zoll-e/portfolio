@@ -79,7 +79,7 @@
       class="c-reveal"
       style="
       font-size:clamp(3rem,8vw,7rem);font-weight:900;
-      letter-spacing:-0.04em;line-height:0.92;
+      letter-spacing:-0.025em;line-height:0.92;
       color:#fff;margin-bottom:1.5rem;
       text-shadow:0 0 60px #ff00ff22;
     "

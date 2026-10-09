@@ -63,12 +63,12 @@
     <div bind:this={trackDesktop} style="display:flex;gap:2rem;white-space:nowrap;will-change:transform;align-items:center;padding:0.2rem 0;">
       {#each [...allTech, ...allTech] as tech}
         <div role="img" aria-label={tech.name}
-          style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.4;transition:opacity 0.25s;"
+          style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.65;transition:opacity 0.25s;"
           onmouseenter={(e) => (e.currentTarget as HTMLElement).style.opacity = '1'}
-          onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.4'}
+          onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.65'}
         >
           <i class={tech.icon} style="font-size:1.3rem;color:#fff;"></i>
-          <span style="font-size:0.5rem;color:rgba(255,255,255,0.35);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
+          <span style="font-size:0.55rem;color:rgba(255,255,255,0.7);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
         </div>
       {/each}
     </div>
@@ -82,12 +82,12 @@
       <div bind:this={track1} style="display:flex;gap:2rem;white-space:nowrap;will-change:transform;align-items:center;padding:0.2rem 0;">
         {#each [...row1, ...row1] as tech}
           <div role="img" aria-label={tech.name}
-            style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.4;transition:opacity 0.25s;"
+            style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.65;transition:opacity 0.25s;"
             onmouseenter={(e) => (e.currentTarget as HTMLElement).style.opacity = '1'}
-            onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.4'}
+            onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.65'}
           >
             <i class={tech.icon} style="font-size:1.3rem;color:#fff;"></i>
-            <span style="font-size:0.5rem;color:rgba(255,255,255,0.35);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
+            <span style="font-size:0.55rem;color:rgba(255,255,255,0.7);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
           </div>
         {/each}
       </div>
@@ -99,12 +99,12 @@
       <div bind:this={track2} style="display:flex;gap:2rem;white-space:nowrap;will-change:transform;align-items:center;padding:0.2rem 0;">
         {#each [...row2, ...row2] as tech}
           <div role="img" aria-label={tech.name}
-            style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.4;transition:opacity 0.25s;"
+            style="display:inline-flex;flex-direction:column;align-items:center;gap:0.25rem;flex-shrink:0;opacity:0.65;transition:opacity 0.25s;"
             onmouseenter={(e) => (e.currentTarget as HTMLElement).style.opacity = '1'}
-            onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.4'}
+            onmouseleave={(e) => (e.currentTarget as HTMLElement).style.opacity = '0.65'}
           >
             <i class={tech.icon} style="font-size:1.3rem;color:#fff;"></i>
-            <span style="font-size:0.5rem;color:rgba(255,255,255,0.35);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
+            <span style="font-size:0.55rem;color:rgba(255,255,255,0.7);letter-spacing:0.07em;font-weight:600;text-transform:uppercase;">{tech.name}</span>
           </div>
         {/each}
       </div>

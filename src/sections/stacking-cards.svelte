@@ -168,6 +168,10 @@
   <div
     style="position:absolute;inset:0;z-index:1;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,0.07) 0px,rgba(0,0,0,0.07) 1px,transparent 1px,transparent 3px);"
   ></div>
+  <!-- fade into the black tech-stack strip below -->
+  <div
+    style="position:absolute;left:0;right:0;bottom:0;height:6rem;z-index:2;pointer-events:none;background:linear-gradient(to bottom,transparent,#000);"
+  ></div>
 
   <div class="projects-header" style="position:absolute;z-index:50;">
     <p

@@ -6,14 +6,13 @@
   ];
 </script>
 
-<footer style="
+<footer class="site-footer" style="
   background: #07000f;
   border-top: 1px solid rgba(255,0,255,0.1);
   padding: 2.5rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 1rem;
 ">
   <p style="font-size:0.7rem;color:rgba(255,255,255,0.2);letter-spacing:0.08em;">
@@ -41,7 +40,18 @@
     {/each}
   </div>
 
-  <p style="font-size:0.65rem;color:rgba(255,0,255,0.3);letter-spacing:0.06em;font-style:italic;">
+  <p class="footer-tagline" style="font-size:0.65rem;color:rgba(255,0,255,0.6);letter-spacing:0.06em;font-style:italic;text-align:right;">
     Built with Svelte · Vim (still inside)
   </p>
 </footer>
+
+<style>
+  @media (max-width: 768px) {
+    .site-footer {
+      grid-template-columns: 1fr !important;
+      justify-items: center;
+      text-align: center;
+    }
+    .footer-tagline { text-align: center !important; }
+  }
+</style>
